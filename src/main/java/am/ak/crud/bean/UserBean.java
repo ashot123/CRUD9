@@ -1,4 +1,4 @@
-package net.roseindia.bean;
+package am.ak.crud.bean;
 
 public class UserBean {
 

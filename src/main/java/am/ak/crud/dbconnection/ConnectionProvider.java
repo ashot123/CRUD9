@@ -1,4 +1,4 @@
-package net.roseindia.dbconnection;
+package am.ak.crud.dbconnection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

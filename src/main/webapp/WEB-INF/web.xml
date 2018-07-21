@@ -4,17 +4,33 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          id="WebApp_ID" version="2.5">
     <display-name>jspServletJdbcExample</display-name>
+
+    <!-- This is a context init parameter -->
+    <context-param>
+        <param-name>recordsPerPage</param-name>
+        <param-value>5</param-value>
+    </context-param>
+    <context-param>
+        <param-name>page</param-name>
+        <param-value>1</param-value>
+    </context-param>
+
     <welcome-file-list>
         <!--<welcome-file>user.jsp</welcome-file>-->
-        <welcome-file>allTasks.jsp</welcome-file>
+        <welcome-file>jsp/home.jsp</welcome-file>
     </welcome-file-list>
-    <servlet>
-        <description>Just description</description>
-        <servlet-name>UserHandler</servlet-name>
-        <servlet-class>net.roseindia.handler.UserHandler</servlet-class>
+    <!--<servlet>
+        <servlet-name>2</servlet-name>
+        <servlet-class>am.ak.crud.controller.GoToUserCreate</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>UserHandler</servlet-name>
-        <url-pattern>/UserHandler</url-pattern>
-    </servlet-mapping>
+        <servlet-name>2</servlet-name>
+        <url-pattern>/goToUserCreate</url-pattern>
+    </servlet-mapping>-->
+
+ <!--   <context-param>
+        <description></description>
+        <param-name>page</param-name>
+        <param-value>1</param-value>
+    </context-param>-->
 </web-app>

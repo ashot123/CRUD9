@@ -6,9 +6,9 @@
     <title>Add New User</title>
 </head>
 <body>
-<form method="POST" action='UserHandler' name="frmAddUser">
+<form method="POST" action="createUser" >
     <input type="hidden" name="action" value="insert" />
-    <p><b>Add New Record</b></p>
+    <p><b><h2>Add New Record(new one)</h2></b></p>
     <table>
         <tr>
             <td>First Name</td>
@@ -28,6 +28,6 @@
         </tr>
     </table>
 </form>
-<p><a href="UserHandler?action=listUser">View-All-Records</a></p>
+<p><a href="goToListView">View-All-Records</a></p>
 </body>
 </html>

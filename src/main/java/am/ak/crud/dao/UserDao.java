@@ -1,14 +1,11 @@
-package net.roseindia.dao;
+package am.ak.crud.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.roseindia.bean.UserBean;
-import net.roseindia.dbconnection.ConnectionProvider;
+import am.ak.crud.bean.UserBean;
+import am.ak.crud.dbconnection.ConnectionProvider;
 
 public class UserDao {
 
@@ -94,8 +91,8 @@ public class UserDao {
             }
             rs.close();
             rs = ps.executeQuery("SELECT FOUND_ROWS()");
-            if (rs.next())
-                this.noOfRecords = rs.getInt(1);
+           /* if (rs.next())
+                this.noOfRecords = rs.getInt(1);*/
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -103,8 +100,27 @@ public class UserDao {
         return users;
     }
 
+    @Deprecated
     public int getNoOfRecords() {
         return noOfRecords;
+    }
+
+    public int getNumberOfRecords() {
+
+        try (Statement statement = conn.createStatement();
+             ResultSet rs = statement.executeQuery("SELECT COUNT(*) FROM users");) {
+
+            if (rs.next()) {
+                return rs.getInt(1);
+            } else {
+                  throw new SQLException("rs is empty");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return 1;
+        }
+
+
     }
 
     public UserBean getUserById(int userId) {
