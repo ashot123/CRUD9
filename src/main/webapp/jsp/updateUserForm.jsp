@@ -1,7 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%--<%@ page import="UserBean" %>--%>
-<%--<%@ page import="UserDao"%>--%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <jsp:useBean id="userBean" scope="request" type="am.ak.crud.bean.UserBean"/>
 
 <html>

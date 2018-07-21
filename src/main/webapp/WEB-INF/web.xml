@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
-         xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-         id="WebApp_ID" version="2.5">
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
     <display-name>jspServletJdbcExample</display-name>
 
     <!-- This is a context init parameter -->
@@ -16,21 +15,7 @@
     </context-param>
 
     <welcome-file-list>
-        <!--<welcome-file>user.jsp</welcome-file>-->
         <welcome-file>jsp/home.jsp</welcome-file>
     </welcome-file-list>
-    <!--<servlet>
-        <servlet-name>2</servlet-name>
-        <servlet-class>am.ak.crud.controller.GoToUserCreate</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>2</servlet-name>
-        <url-pattern>/goToUserCreate</url-pattern>
-    </servlet-mapping>-->
 
- <!--   <context-param>
-        <description></description>
-        <param-name>page</param-name>
-        <param-value>1</param-value>
-    </context-param>-->
 </web-app>
